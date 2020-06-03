@@ -1,4 +1,4 @@
-yarn{
+{
   "name": "WalliM_Cards_Website",
   "private": true,
   "dependencies": {
