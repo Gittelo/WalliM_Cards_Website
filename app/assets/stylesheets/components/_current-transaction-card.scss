@@ -12,10 +12,19 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   padding-bottom: 12px;
 }
+.current-transaction-card-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
 .current-transaction-card-value h2 {
   font-size: calc(3.325rem + 0.9vw);
   margin: 32px 0px 52px 0px;
+  padding: 6px;
+  border-radius: 5px;
+  color: $green;
+  background-color: $light-green;
 }
 
 .current-transaction-card-info {
