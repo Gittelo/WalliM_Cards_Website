@@ -1,0 +1,52 @@
+.all-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.current-transaction-card {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding-bottom: 12px;
+}
+
+.current-transaction-card-value h2 {
+  font-size: calc(3.325rem + 0.9vw);
+  margin: 32px 0px 52px 0px;
+}
+
+.current-transaction-card-info {
+  margin-left: 8px;
+  border-left: 1px solid #48AC98;
+}
+.current-transaction-card-info p{
+  margin-bottom: 0px;
+  margin-left: 4px;
+}
+
+.current-balance {
+  margin-top: 12px;
+  width: 100%;
+}
+.current-balance h2 {
+margin-bottom: 0px;
+}
+
+.current-balance-icon {
+  display: flex;
+  align-items: center;
+  font-size: calc(0.6rem + 0.9vw);
+}
+
+.current-balance-icon p {
+  margin-bottom: 0px;
+  margin-left: 4px;
+  color: $light-gray;
+}
+
+.current-balance-icon i {
+  color: $light-gray;
+}
