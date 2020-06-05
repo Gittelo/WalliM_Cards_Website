@@ -1,3 +1,32 @@
+  <script>
+    var counter = 0;
+    window.addEventListener("load", function() {
+       var w = document.querySelector('.waiting');
+       var v = document.querySelector('.value');
+       var s = document.querySelector('.space');
+       v.style.display = 'none';
+        console.log(w);
+       var idInt =  setInterval(function() {
+          if (w.style.display == 'none' && counter < 3) {
+            console.log("blink");
+            counter = counter + 1;
+            w.style.display = '';
+            s.style.display = 'none'
+          } else if (counter == 2) {
+            console.log("not blink");
+            w.style.display = 'none';
+            v.style.display = '';
+            document.querySelector('.current-value').innerText = "€1,300.00";
+            clearInterval(idInt);
+          } else {
+            w.style.display = 'none';
+            s.style.display = '';
+          }
+        }, 1500);
+        return;
+    });
+
+  </script>
 <div class="container">
 
 
@@ -53,32 +82,4 @@
 
   </div>
 </div>
-  <script>
-    var counter = 0;
-    window.addEventListener("load", function() {
-       var w = document.querySelector('.waiting');
-       var v = document.querySelector('.value');
-       var s = document.querySelector('.space');
-       v.style.display = 'none';
-        console.log(w);
-       var idInt =  setInterval(function() {
-          if (w.style.display == 'none' && counter < 3) {
-            console.log("blink");
-            counter = counter + 1;
-            w.style.display = '';
-            s.style.display = 'none'
-          } else if (counter == 2) {
-            console.log("not blink");
-            w.style.display = 'none';
-            v.style.display = '';
-            document.querySelector('.current-value').innerText = "€1,300.00";
-            clearInterval(idInt);
-          } else {
-            w.style.display = 'none';
-            s.style.display = '';
-          }
-        }, 1500);
-        return;
-    });
 
-  </script>
