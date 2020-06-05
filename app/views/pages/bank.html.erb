@@ -16,6 +16,7 @@
             console.log("not blink");
             w.style.display = 'none';
             v.style.display = '';
+            v.innerText = "+50€";
             document.querySelector('.current-value').innerText = "€1,300.00";
             clearInterval(idInt);
           } else {
@@ -40,7 +41,7 @@
 
         <div class="current-transaction-card">
           <div class="current-transaction-card-value text-center">
-            <h2 class="value">+50€</h2>
+            <h2 class="value"></h2>
             <h5 class="waiting">Processing payment...</h5>
             <h5 class="space" style="color: white; display: none;">-</h5>
           </div>
