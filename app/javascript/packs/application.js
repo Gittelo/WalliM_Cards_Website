@@ -32,4 +32,6 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  window.scrollTo(0,1);
+  console.log("see")
 });
