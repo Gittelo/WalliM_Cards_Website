@@ -22,5 +22,8 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+    <% if controller.action_name == 'bank' %>
+    <%= render 'shared/footer' %>
+    <% end %>
   </body>
 </html>
