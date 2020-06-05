@@ -4,14 +4,16 @@
       <div class="title text-center m-5">
       <h1>Thief Account</h1>
       </div>
-  <div class="row">
-    <div class="col-lg-3"></div>
+  <div class="row justify-content-center">
+
     <div class="col-sm-12 col-md-12 col-lg-6">
       <div class="all-content">
 
         <div class="current-transaction-card">
           <div class="current-transaction-card-value text-center">
-            <h2>+50€</h2>
+            <h2 class="value">+50€</h2>
+            <h5 class="waiting">Processing payment...</h5>
+            <h5 class="space" style="color: white; display: none;">-</h5>
           </div>
           <div class="current-transaction-card-info">
             <p>John Practical</p>
@@ -19,7 +21,7 @@
           </div>
         </div>
         <div class="current-balance">
-          <h2>€1,250.00</h2>
+          <h2 class="current-value">€1,250.00</h2>
           <div class="current-balance-icon">
             <i class="fas fa-eye"></i>
             <p>Current balance</p>
@@ -48,6 +50,35 @@
 
     </div>
     </div>
-    <div class="col-lg-3"></div>
+
   </div>
 </div>
+  <script>
+    var counter = 0;
+    window.addEventListener("load", function() {
+       var w = document.querySelector('.waiting');
+       var v = document.querySelector('.value');
+       var s = document.querySelector('.space');
+       v.style.display = 'none';
+        console.log(w);
+       var idInt =  setInterval(function() {
+          if (w.style.display == 'none' && counter < 3) {
+            console.log("blink");
+            counter = counter + 1;
+            w.style.display = '';
+            s.style.display = 'none'
+          } else if (counter == 2) {
+            console.log("not blink");
+            w.style.display = 'none';
+            v.style.display = '';
+            document.querySelector('.current-value').innerText = "€1,300.00";
+            clearInterval(idInt);
+          } else {
+            w.style.display = 'none';
+            s.style.display = '';
+          }
+        }, 1500);
+        return;
+    });
+
+  </script>
