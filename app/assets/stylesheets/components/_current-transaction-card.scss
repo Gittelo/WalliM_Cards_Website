@@ -27,6 +27,15 @@
   background-color: $light-green;
 }
 
+.current-transaction-card-value-denied h2 {
+  font-size: calc(3.325rem + 0.9vw);
+  margin: 32px 0px 52px 0px;
+  padding: 6px;
+  border-radius: 5px;
+  color: $red;
+  background-color: $light-red;
+}
+
 .current-transaction-card-info {
   margin-left: 8px;
   border-left: 1px solid #48AC98;
